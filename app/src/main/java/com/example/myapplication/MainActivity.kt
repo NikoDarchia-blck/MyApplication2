@@ -1,3 +1,5 @@
+// temporary comment for revert demo
+
 package com.example.myapplication
 
 import android.graphics.Color
