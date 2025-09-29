@@ -11,17 +11,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Find the views from the layout
         val textView = findViewById<TextView>(R.id.textView)
         val button = findViewById<Button>(R.id.button)
-        val buttonColor = findViewById<Button>(R.id.buttonColor)
+        val buttonChangeColor = findViewById<Button>(R.id.buttonChangeColor)
 
+        // First button: change the text
         button.setOnClickListener {
             textView.text = "Hello from the Button!"
         }
 
-        buttonColor.setOnClickListener {
-            textView.setTextColor(Color.parseColor("#FF5722"))
+        // Second button: change the text color
+        buttonChangeColor.setOnClickListener {
+            textView.setTextColor(Color.RED) // you can change to any color
         }
     }
 }
+
 
