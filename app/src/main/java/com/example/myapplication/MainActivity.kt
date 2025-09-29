@@ -11,10 +11,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Find the views from the layout
         val textView = findViewById<TextView>(R.id.textView)
         val button = findViewById<Button>(R.id.button)
         val buttonChangeColor = findViewById<Button>(R.id.buttonChangeColor)
+        val buttonChangeBackground = findViewById<Button>(R.id.buttonChangeBackground)
 
         // First button: change the text
         button.setOnClickListener {
@@ -23,7 +23,13 @@ class MainActivity : AppCompatActivity() {
 
         // Second button: change the text color
         buttonChangeColor.setOnClickListener {
-            textView.setTextColor(Color.RED) // you can change to any color
+            textView.setTextColor(Color.RED)
+        }
+
+        // Third button: change the background color
+        buttonChangeBackground.setOnClickListener {
+            val rootView = findViewById<android.view.View>(android.R.id.content)
+            rootView.setBackgroundColor(Color.parseColor("#E3F2FD")) // light blue
         }
     }
 }
